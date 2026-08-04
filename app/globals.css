@@ -71,8 +71,10 @@
   --color-ring: var(--ring);
   /* Body font, confirmed from Figma's design tokens (get_variable_defs). */
   --font-sans: var(--font-inter);
-  /* Hero wordmark script font — placeholder, verify against Figma (#9). */
+  /* Hero wordmark script font, confirmed via get_design_context (#9). */
   --font-display: var(--font-display);
+  /* Heading/tagline/button font, confirmed via get_design_context (#9). */
+  --font-heading: var(--font-heading);
 
   /* Brand tokens pulled from Figma's get_variable_defs during charting.
      Section components (#9-#13) should use these instead of ad-hoc hex. */

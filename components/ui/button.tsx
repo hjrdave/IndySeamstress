@@ -14,6 +14,10 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
+        // Figma CTA button style (get_design_context, #9): transparent fill,
+        // 3px brand-border outline, Inria Serif bold.
+        brand:
+          "border-[3px] border-brand-border bg-transparent font-heading font-bold text-black hover:bg-black/5",
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -21,6 +25,13 @@ const buttonVariants = cva(
         lg: "h-10 rounded-md px-6",
       },
     },
+    compoundVariants: [
+      {
+        variant: "brand",
+        size: "default",
+        class: "h-auto rounded-lg p-3 text-xl leading-none",
+      },
+    ],
     defaultVariants: {
       variant: "default",
       size: "default",

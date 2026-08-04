@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script } from "next/font/google";
+import { Inter, Alex_Brush, Inria_Serif } from "next/font/google";
 import "./globals.css";
 
-// Confirmed from Figma's design tokens (get_variable_defs): body font is Inter.
+// Confirmed from Figma get_design_context (#9): body/contact-detail font is Inter.
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-// Placeholder for the hero's script/cursive logo wordmark — Figma access
-// wasn't available to pull the exact font family for this scaffolding pass.
-// Verify against the live Figma node and swap if it doesn't match (#9).
-const displayScript = Dancing_Script({
+// Confirmed from Figma get_design_context (#9): the "Indy Seamstress" hero
+// wordmark uses Alex Brush.
+const displayScript = Alex_Brush({
+  weight: "400",
   variable: "--font-display",
+  subsets: ["latin"],
+});
+
+// Confirmed from Figma get_design_context (#9): headings/taglines/buttons use
+// Inria Serif.
+const inriaSerif = Inria_Serif({
+  weight: ["400", "700"],
+  variable: "--font-heading",
   subsets: ["latin"],
 });
 
@@ -25,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${displayScript.variable} h-full antialiased`}
+      className={`${inter.variable} ${displayScript.variable} ${inriaSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
