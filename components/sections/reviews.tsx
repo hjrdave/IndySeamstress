@@ -7,27 +7,32 @@ export async function ReviewsSection() {
 
   return (
     <section id="reviews" className="px-6 py-16">
-      <h2 className="mb-8 text-center text-2xl font-semibold">Reviews</h2>
+      <h2 className="mb-8 text-center font-heading text-4xl font-normal">
+        Reviews
+      </h2>
       <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">
         {reviews.map((review) => (
-          <Card key={review.id}>
+          <Card
+            key={review.id}
+            className="rounded-xl border-[#dee2e6] bg-white"
+          >
             <CardContent className="flex flex-col gap-3 pt-4">
               <div
-                className="flex gap-0.5 text-amber-500"
+                className="flex gap-0.5 text-[#fbd126]"
                 aria-label={`${review.rating} out of 5 stars`}
               >
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}
-                    className="size-4"
+                    className="size-5"
                     fill={i < review.rating ? "currentColor" : "none"}
                   />
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-black">
                 &ldquo;{review.quote}&rdquo;
+                <br />- {review.author}
               </p>
-              <p className="text-sm font-medium">- {review.author}</p>
             </CardContent>
           </Card>
         ))}
