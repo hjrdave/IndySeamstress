@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FacebookIcon, InstagramIcon } from "@/components/icons/social";
+import { assetPath } from "@/lib/asset-path";
 
 // Real handles aren't known yet — stubbed until the owner provides them.
 const SOCIAL_LINKS = [
@@ -9,8 +11,16 @@ const SOCIAL_LINKS = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t bg-secondary/40 px-6 py-10 text-center sm:text-left">
-      <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
+    <footer className="relative overflow-hidden px-6 pt-10 pb-14 text-center sm:text-left">
+      <Image
+        src={assetPath("/images/hero-background.png")}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+
+      <div className="relative mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         <div>
           <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
             Follow Me On
@@ -30,7 +40,8 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col items-center sm:items-start">
-          <p className="font-display text-2xl">Indy Seamstress</p>
+          <p className="font-heading text-lg">Your</p>
+          <p className="font-display text-3xl">Indy Seamstress</p>
           <p className="text-sm text-muted-foreground">
             Something Stitched, Something Sewn
           </p>
@@ -61,10 +72,13 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <p className="mt-8 border-t pt-6 text-center text-xs text-muted-foreground">
-        &copy;{new Date().getFullYear()} Indy Seamstress, Something Stitched,
-        Something Sewn
-      </p>
+      {/* Solid white strip for the copyright line (Figma's Rectangle 1, #13). */}
+      <div className="relative mt-8 -mx-6 -mb-14 bg-white py-3">
+        <p className="text-center text-xs text-muted-foreground">
+          &copy;{new Date().getFullYear()} Indy Seamstress, Something Stitched,
+          Something Sewn
+        </p>
+      </div>
     </footer>
   );
 }

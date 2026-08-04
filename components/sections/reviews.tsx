@@ -7,7 +7,7 @@ export async function ReviewsSection() {
 
   return (
     <section id="reviews" className="px-6 py-16">
-      <h2 className="mb-8 text-center font-heading text-4xl font-normal">
+      <h2 className="mx-auto mb-8 max-w-5xl font-heading text-4xl font-normal">
         Reviews
       </h2>
       <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">
