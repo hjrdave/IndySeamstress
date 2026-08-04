@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ContactModal } from "@/components/contact-modal";
 import { SERVICES } from "@/lib/services";
+import { assetPath } from "@/lib/asset-path";
 
 export function ServicesSection() {
   return (
@@ -13,7 +14,7 @@ export function ServicesSection() {
           <Card key={service.id} className="gap-3 overflow-hidden">
             <div className="relative aspect-[359/247] w-full">
               <Image
-                src={service.image}
+                src={assetPath(service.image)}
                 alt={service.alt}
                 fill
                 sizes="(min-width: 640px) 50vw, 100vw"

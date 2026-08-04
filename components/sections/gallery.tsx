@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { GALLERY_PHOTOS } from "@/lib/gallery";
+import { assetPath } from "@/lib/asset-path";
 
 export function GallerySection() {
   return (
@@ -12,7 +13,7 @@ export function GallerySection() {
             className="relative aspect-[359/337] overflow-hidden rounded-lg border"
           >
             <Image
-              src={photo.image}
+              src={assetPath(photo.image)}
               alt={photo.alt}
               fill
               sizes="(min-width: 640px) 33vw, 100vw"
