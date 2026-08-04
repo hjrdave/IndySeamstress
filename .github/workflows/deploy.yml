@@ -2,10 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    # TODO: drop the working-branch name once the repo's default branch is
-    # renamed to `main` (this repo's default is currently a work branch,
-    # an artifact of it being the first branch ever pushed to an empty repo).
-    branches: [main, claude/matt-pocock-wayfinder-kj98f7]
+    # Covers every branch that's been the repo's default so far
+    # (gh-pages is current) plus this session's working branch, so the
+    # workflow keeps firing regardless of which one ends up canonical.
+    branches: [main, master, gh-pages, claude/matt-pocock-wayfinder-kj98f7]
   workflow_dispatch:
 
 permissions:
