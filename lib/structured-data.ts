@@ -1,17 +1,19 @@
 import { SITE_INFO, SITE_URL } from "@/lib/site-info";
 import { FACEBOOK_URL } from "@/lib/social-links";
-import { BIO_INTRO } from "@/lib/bio";
+import { BIO_INTRO, BIO_OUTRO, SPECIALTIES } from "@/lib/bio";
 import { SERVICES } from "@/lib/services";
 
 // schema.org LocalBusiness + service catalog — read by both traditional
-// search crawlers and LLM-based answer engines (#14).
+// search crawlers and LLM-based answer engines (#14). This bio content is
+// SEO-only, not rendered as a visible page section.
 export function getLocalBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: SITE_INFO.businessName,
     alternateName: "Indy Seamstress",
-    description: BIO_INTRO,
+    description: `${BIO_INTRO} ${BIO_OUTRO}`,
+    knowsAbout: SPECIALTIES,
     url: SITE_URL,
     telephone: SITE_INFO.phoneDisplay,
     email: SITE_INFO.email,
