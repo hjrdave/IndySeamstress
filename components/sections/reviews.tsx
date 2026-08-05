@@ -41,9 +41,9 @@ export async function ReviewsSection() {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <Button asChild variant="outline">
+        <Button asChild variant="brand">
           <a href={FACEBOOK_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
-            See More Reviews
+            SEE MORE REVIEWS
           </a>
         </Button>
       </div>

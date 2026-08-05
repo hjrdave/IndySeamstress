@@ -19,11 +19,11 @@ export function SiteFooter() {
       />
 
       <div className="relative mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
-        <div>
+        <div className="text-center">
           <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
             Follow Me On
           </h2>
-          <div className="mt-3 flex justify-center gap-4 sm:justify-start">
+          <div className="mt-3 flex justify-center gap-4">
             {SOCIAL_LINKS.map(({ label, href, Icon }) => (
               <a
                 key={label}
@@ -31,17 +31,17 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="text-foreground/70 transition-colors hover:text-foreground"
+                className="text-foreground/80 transition-opacity hover:opacity-80"
               >
-                <Icon className="size-5" />
+                <Icon className="size-8" />
               </a>
             ))}
           </div>
         </div>
 
-        <div className="flex flex-col items-center sm:items-start">
-          <p className="font-heading text-base">Your</p>
-          <p className="font-display text-2xl">Indy Seamstress</p>
+        <div className="flex flex-col items-center text-center">
+          <p className="font-heading text-sm">Your</p>
+          <p className="font-display text-4xl leading-tight">Indy Seamstress</p>
           <p className="font-heading text-sm">
             Something Stitched Something Sewn
           </p>

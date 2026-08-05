@@ -1,16 +1,17 @@
 import type { SVGProps } from "react";
 
-// lucide-react dropped brand/social glyphs; these are small hand-authored
-// substitutes until real social handles + a design pass exist (see #13).
+// lucide-react dropped brand/social glyphs. Facebook is the real Font
+// Awesome Free "facebook" solid icon (provided directly by the site owner);
+// the circle is baked into the path itself, no wrapper needed.
 export function FacebookIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 640 640"
       fill="currentColor"
       aria-hidden="true"
       {...props}
     >
-      <path d="M13.5 21v-7.5H16l.5-3H13.5V8.5c0-.87.24-1.46 1.49-1.46H16.5V4.36C16.24 4.32 15.36 4.25 14.34 4.25c-2.13 0-3.59 1.3-3.59 3.68V10.5H8.25v3h2.5V21h2.75Z" />
+      <path d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z" />
     </svg>
   );
 }
