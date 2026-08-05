@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import {
   Dialog,
   DialogClose,
@@ -10,6 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { FACEBOOK_MESSENGER_URL } from "@/lib/social-links";
 
 // Matches the footer's contact info (map/spec source of truth).
 const CONTACT_INFO = {
@@ -47,6 +48,17 @@ export function ContactModal({ children }: { children: ReactNode }) {
           <li className="flex items-center gap-3">
             <MapPin className="size-5 shrink-0" aria-hidden="true" />
             <span>{CONTACT_INFO.location}</span>
+          </li>
+          <li className="flex items-center gap-3">
+            <MessageCircle className="size-5 shrink-0" aria-hidden="true" />
+            <a
+              href={FACEBOOK_MESSENGER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Message me on Facebook
+            </a>
           </li>
         </ul>
         <DialogClose asChild>

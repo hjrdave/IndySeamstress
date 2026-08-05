@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ContactModal } from "@/components/contact-modal";
 import { assetPath } from "@/lib/asset-path";
-import { FacebookBadge } from "@/components/icons/social-badges";
-import { FACEBOOK_URL } from "@/lib/social-links";
 
 // Icon positions below are percentages of the background image's own
 // 1728x703 box (Figma get_metadata/get_design_context, #9), sized down from
@@ -35,20 +33,6 @@ export function HeroSection() {
         </div>
 
         <div className="absolute inset-0 mx-auto max-w-[1728px]">
-          {/* Small social badge — fixed size, never scales with viewport.
-              She only has a Facebook page, so this is the only platform
-              linked (matches the footer). */}
-          <a
-            href={FACEBOOK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="absolute block w-8 sm:w-9"
-            style={{ left: "0%", top: "77.7%" }}
-          >
-            <FacebookBadge className="w-full" />
-          </a>
-
           {/* Desktop-only decorative icons (dress form + needle & thread
               appear only on the desktop Figma frame). */}
           <div

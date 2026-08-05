@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Alex_Brush, Inria_Serif } from "next/font/google";
+import { StickyFacebookBadge } from "@/components/sticky-facebook-badge";
+import { StickyMessengerButton } from "@/components/sticky-messenger-button";
 import "./globals.css";
 
 // Confirmed from Figma get_design_context (#9): body/contact-detail font is Inter.
@@ -35,7 +37,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${displayScript.variable} ${inriaSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <StickyFacebookBadge />
+        <StickyMessengerButton />
+      </body>
     </html>
   );
 }
