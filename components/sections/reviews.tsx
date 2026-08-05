@@ -1,12 +1,14 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { getReviews } from "@/lib/reviews";
+import { FACEBOOK_REVIEWS_URL } from "@/lib/social-links";
 
 export async function ReviewsSection() {
   const reviews = await getReviews();
 
   return (
-    <section id="reviews" className="px-6 py-16">
+    <section id="reviews" className="px-6 pt-16 pb-32">
       <h2 className="mx-auto mb-8 max-w-5xl font-heading text-4xl font-normal">
         Reviews
       </h2>
@@ -18,7 +20,7 @@ export async function ReviewsSection() {
           >
             <CardContent className="flex flex-col gap-3 pt-4">
               <div
-                className="flex gap-0.5 text-[#fbd126]"
+                className="flex justify-center gap-0.5 text-[#fbd126]"
                 aria-label={`${review.rating} out of 5 stars`}
               >
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -36,6 +38,14 @@ export async function ReviewsSection() {
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-10 flex justify-center">
+        <Button asChild variant="outline">
+          <a href={FACEBOOK_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
+            See More Reviews
+          </a>
+        </Button>
       </div>
     </section>
   );

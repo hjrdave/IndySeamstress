@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FacebookIcon, InstagramIcon } from "@/components/icons/social";
+import { FacebookIcon } from "@/components/icons/social";
 import { assetPath } from "@/lib/asset-path";
+import { FACEBOOK_URL } from "@/lib/social-links";
 
-// Real handles aren't known yet — stubbed until the owner provides them.
-const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#", Icon: FacebookIcon },
-  { label: "Instagram", href: "#", Icon: InstagramIcon },
-];
+// She only has a Facebook page — no other platforms to link to.
+const SOCIAL_LINKS = [{ label: "Facebook", href: FACEBOOK_URL, Icon: FacebookIcon }];
 
 export function SiteFooter() {
   return (
@@ -30,6 +28,8 @@ export function SiteFooter() {
               <a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="text-foreground/70 transition-colors hover:text-foreground"
               >
@@ -40,10 +40,10 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col items-center sm:items-start">
-          <p className="font-heading text-lg">Your</p>
-          <p className="font-display text-3xl">Indy Seamstress</p>
-          <p className="text-sm text-muted-foreground">
-            Something Stitched, Something Sewn
+          <p className="font-heading text-base">Your</p>
+          <p className="font-display text-2xl">Indy Seamstress</p>
+          <p className="font-heading text-sm">
+            Something Stitched Something Sewn
           </p>
         </div>
 

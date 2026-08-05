@@ -32,7 +32,7 @@ export function ServicesSection() {
         ))}
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-xl flex-col items-center gap-4 text-center">
+      <div className="mx-auto mt-20 flex max-w-xl flex-col items-center gap-4 text-center">
         <p className="font-heading text-2xl sm:text-3xl">
           Want to schedule an appointment?
         </p>

@@ -5,30 +5,31 @@ export type Review = {
   quote: string;
 };
 
-// Drafted copy — the Figma file's testimonials describe an unrelated
-// face-painting business, so they're not shippable as-is. Replace with
-// real reviews once available.
+// Real reviews from Donna's Facebook page — she doesn't have Google reviews
+// yet (https://www.facebook.com/SomethingStichedSomethingSewn/reviews).
+// Serves as the fallback until GOOGLE_PLACES_API_KEY/GOOGLE_PLACE_ID are
+// configured and she has Google reviews to pull instead.
 export const PLACEHOLDER_REVIEWS: Review[] = [
   {
-    id: "placeholder-1",
-    author: "Rachel M.",
+    id: "fb-devra-dimpfl-callaghan",
+    author: "Devra Dimpfl Callaghan",
     rating: 5,
     quote:
-      "Donna took in my wedding dress two sizes and it fit like it was made for me. She caught details the bridal shop's own tailor missed. Booking with her again for my sister's dress.",
+      "Donna's work is spectacular. She's a magician! Plus, she is just a delightful human being!!!",
   },
   {
-    id: "placeholder-2",
-    author: "Priya S.",
+    id: "fb-alie-settlemyre",
+    author: "Alie Settlemyre",
     rating: 5,
     quote:
-      "I brought her a formal gown with a broken zipper and a hem two inches too long the week of an event. She had it back to me in three days, perfect. Extremely reliable.",
+      "Donna was absolutely amazing to work with and so affordable! I was scared I wasn't going to be able to get my dream dress to fit/ work with my body type, but Donna made my dreams come true!",
   },
   {
-    id: "placeholder-3",
-    author: "Marcus T.",
+    id: "fb-emma-katherine",
+    author: "Emma Katherine",
     rating: 5,
     quote:
-      "Had a stack of old t-shirts turned into a quilt for my dad's birthday. The stitching is beautiful and it clearly means a lot to him. Worth every penny.",
+      "Donna saw my vision and brought it to life! Went from a floor length to my dream tea length wedding dress!! She was wonderful to work with and so talented!",
   },
 ];
 
