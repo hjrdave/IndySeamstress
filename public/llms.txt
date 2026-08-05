@@ -1,0 +1,24 @@
+# Indy Seamstress (Something Stitched, Something Sewn)
+
+> Donna Pierce is a seamstress in Indianapolis, IN with over 40 years of experience specializing in bridal alterations, dress and clothing tailoring, heirloom gown restoration, and custom t-shirt quilts.
+
+Donna brings care, precision, and a smile to every stitch — whether it's a wedding gown fitted for the big day or a favorite pair of jeans hemmed just right. She is currently accepting new bridal, alteration, and custom quilt clients.
+
+## Services
+
+- Bridal Alterations ($100.00): Wedding gowns taken in, hemmed, and bustled so your dress fits exactly right on the day that matters most. Covers modern and vintage gowns and heirloom gown restoration.
+- Street Wear Alterations ($50.00): Everyday clothing hemmed, taken in, or resized — pants, skirts, and casual wear.
+- Formal Wear Alterations ($125.00): Suits and formal wear tailored for a sharp, comfortable fit at weddings, galas, and black-tie events. Also covers prom and other formal dress alterations.
+- Custom T-Shirt Quilts ($120.00): A box of meaningful t-shirts turned into a keepsake quilt, hand-stitched to be treasured for years.
+
+## Contact
+
+- Phone: (317) 287-4977
+- Email: donnapierce@gmail.com
+- Location: Indianapolis, IN
+- Facebook: https://www.facebook.com/SomethingStichedSomethingSewn
+- Facebook Messenger: https://m.me/SomethingStichedSomethingSewn
+
+## Site
+
+- [Homepage](https://hjrdave.github.io/IndySeamstress/): Services, photo gallery of past work, customer reviews, and contact info.

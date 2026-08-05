@@ -28,7 +28,7 @@ export function HeroSection() {
           />
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-1/2 h-16 w-[140%] -translate-x-1/2 translate-y-1/2 rounded-[50%] bg-white sm:h-24"
+            className="absolute bottom-0 left-1/2 h-20 w-[140%] -translate-x-1/2 translate-y-1/2 rounded-[50%] bg-white blur-2xl sm:h-28"
           />
         </div>
 
@@ -60,11 +60,15 @@ export function HeroSection() {
             />
           </div>
 
-          {/* Shared across breakpoints (both Figma frames show these). */}
+          {/* Shared across breakpoints (both Figma frames show these).
+              Mobile uses fixed sizing/position (the section's min-h-[560px]
+              is a fixed height, not the aspect-ratio box desktop uses, so
+              the same percentages don't translate) — sized bigger per user
+              feedback; OK to overflow past the pink background on mobile,
+              just needs to clear the Services heading/cards below. */}
           <div
             aria-hidden="true"
-            className="absolute"
-            style={{ left: "40%", top: "80%", width: "11%", height: "28%" }}
+            className="absolute top-[85%] left-[40%] h-28 w-28 sm:top-[80%] sm:h-[28%] sm:w-[11%]"
           >
             <Image
               src={assetPath("/icons/hero/scissors.png")}
@@ -96,7 +100,10 @@ export function HeroSection() {
             Something Stitched Something Sewn
           </p>
           <ContactModal>
-            <Button variant="brand" className="mt-2">
+            <Button
+              variant="brand"
+              className="mt-2 max-w-[min(90vw,360px)] whitespace-normal sm:max-w-none sm:whitespace-nowrap"
+            >
               CONTACT ME FOR AN APPOINTMENT
             </Button>
           </ContactModal>

@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { FacebookIcon } from "@/components/icons/social";
 import { assetPath } from "@/lib/asset-path";
 import { FACEBOOK_URL } from "@/lib/social-links";
+import { SITE_INFO } from "@/lib/site-info";
 
 // She only has a Facebook page — no other platforms to link to.
 const SOCIAL_LINKS = [{ label: "Facebook", href: FACEBOOK_URL, Icon: FacebookIcon }];
@@ -54,26 +55,30 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-2 text-sm">
             <li className="flex items-center justify-center gap-2 sm:justify-start">
               <Mail className="size-4 text-muted-foreground" />
-              <a href="mailto:donnapierce@gmail.com" className="hover:underline">
-                donnapierce@gmail.com
+              <a href={`mailto:${SITE_INFO.email}`} className="hover:underline">
+                {SITE_INFO.email}
               </a>
             </li>
             <li className="flex items-center justify-center gap-2 sm:justify-start">
               <Phone className="size-4 text-muted-foreground" />
-              <a href="tel:317.300.9999" className="hover:underline">
-                317.300.9999
+              <a href={SITE_INFO.phoneHref} className="hover:underline">
+                {SITE_INFO.phoneDisplay}
               </a>
             </li>
             <li className="flex items-center justify-center gap-2 sm:justify-start">
               <MapPin className="size-4 text-muted-foreground" />
-              <span>Indianapolis, IN</span>
+              <span>{SITE_INFO.location}</span>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Solid white strip for the copyright line (Figma's Rectangle 1, #13). */}
-      <div className="relative mt-8 -mx-6 -mb-14 bg-white py-3">
+      {/* Solid white strip for the copyright line (Figma's Rectangle 1, #13).
+          Extra bottom padding on mobile keeps the text clear of the fixed
+          Messenger button at the very bottom of the page when scrolled all
+          the way down; not needed on larger screens where centered text
+          never reaches that bottom-right corner. */}
+      <div className="relative mt-8 -mx-6 -mb-14 bg-white px-6 pt-3 pb-20 sm:pb-3">
         <p className="text-center text-xs text-muted-foreground">
           &copy;{new Date().getFullYear()} Indy Seamstress, Something Stitched,
           Something Sewn

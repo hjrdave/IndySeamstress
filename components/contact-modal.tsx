@@ -11,13 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { FACEBOOK_MESSENGER_URL } from "@/lib/social-links";
-
-// Matches the footer's contact info (map/spec source of truth).
-const CONTACT_INFO = {
-  email: "donnapierce@gmail.com",
-  phone: "317.300.9999",
-  location: "Indianapolis, IN",
-};
+import { SITE_INFO } from "@/lib/site-info";
 
 // Reusable "My Contact Info" dialog (Figma get_design_context, #9). Wrap any
 // trigger element as a child, e.g. <ContactModal><Button>...</Button></ContactModal>.
@@ -35,19 +29,19 @@ export function ContactModal({ children }: { children: ReactNode }) {
         <ul className="mt-4 space-y-3 text-left text-base text-heading">
           <li className="flex items-center gap-3">
             <Mail className="size-5 shrink-0" aria-hidden="true" />
-            <a href={`mailto:${CONTACT_INFO.email}`} className="hover:underline">
-              {CONTACT_INFO.email}
+            <a href={`mailto:${SITE_INFO.email}`} className="hover:underline">
+              {SITE_INFO.email}
             </a>
           </li>
           <li className="flex items-center gap-3">
             <Phone className="size-5 shrink-0" aria-hidden="true" />
-            <a href={`tel:${CONTACT_INFO.phone}`} className="hover:underline">
-              {CONTACT_INFO.phone}
+            <a href={SITE_INFO.phoneHref} className="hover:underline">
+              {SITE_INFO.phoneDisplay}
             </a>
           </li>
           <li className="flex items-center gap-3">
             <MapPin className="size-5 shrink-0" aria-hidden="true" />
-            <span>{CONTACT_INFO.location}</span>
+            <span>{SITE_INFO.location}</span>
           </li>
           <li className="flex items-center gap-3">
             <MessageCircle className="size-5 shrink-0" aria-hidden="true" />

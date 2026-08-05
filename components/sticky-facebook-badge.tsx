@@ -10,7 +10,7 @@ export function StickyFacebookBadge() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Facebook"
-      className="fixed top-1/2 left-0 z-50 w-8 -translate-y-1/2 sm:w-9"
+      className="fixed top-1/2 left-0 z-50 w-6 -translate-y-1/2 sm:w-9"
     >
       <FacebookBadge className="w-full" />
     </a>
