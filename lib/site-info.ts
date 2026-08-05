@@ -1,6 +1,6 @@
 // Single source of truth for business info, reused across the footer,
-// contact modal, About section, and SEO metadata/structured data.
-export const SITE_URL = "https://hjrdave.github.io/IndySeamstress/";
+// contact modal, and SEO metadata/structured data.
+export const SITE_URL = "https://indyseamstress.com/";
 
 export const SITE_INFO = {
   ownerName: "Donna Pierce",

@@ -33,8 +33,9 @@ jobs:
       - run: npm test --if-present
 
       - name: Build static export
+        # No SITE_BASE_PATH: the site now serves from the custom domain root
+        # (indyseamstress.com), not the github.io/IndySeamstress subpath.
         env:
-          SITE_BASE_PATH: /IndySeamstress
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
           GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
         run: npm run build
