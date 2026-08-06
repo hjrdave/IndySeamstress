@@ -7,7 +7,7 @@ import { assetPath } from "@/lib/asset-path";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="px-6 py-16">
+    <section id="services" className="py-16 pr-6 pl-16 sm:px-6">
       <h2 className="mx-auto mb-8 max-w-3xl font-heading text-3xl">Services</h2>
       <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
         {SERVICES.map((service) => (

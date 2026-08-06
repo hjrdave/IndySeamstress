@@ -15,8 +15,9 @@ export function HeroSection() {
         {/* Background + curve live in their own clipped layer so the curve
             doesn't cut off the icons below, which intentionally overflow
             past the pink area (matching Figma). The source photo has no
-            curve baked in, so it's recreated the same way as Gallery's:
-            a wide white ellipse overlapping the bottom edge. */}
+            curve baked in, so it's recreated as an actual SVG curve — a
+            single gentle arc (not wavy), matching the real Figma asset
+            (get_screenshot, node 5:8). */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src={assetPath("/images/hero-background.png")}
@@ -26,10 +27,17 @@ export function HeroSection() {
             sizes="100vw"
             className="object-cover"
           />
-          <div
+          <svg
             aria-hidden="true"
-            className="absolute bottom-0 left-1/2 h-20 w-[140%] -translate-x-1/2 translate-y-1/2 rounded-[50%] bg-white blur-2xl sm:h-28"
-          />
+            viewBox="0 0 1728 140"
+            preserveAspectRatio="none"
+            className="absolute inset-x-0 bottom-0 h-24 w-full sm:h-32"
+          >
+            <path
+              d="M0,55 Q 864,92 1728,48 L1728,140 L0,140 Z"
+              fill="white"
+            />
+          </svg>
         </div>
 
         <div className="absolute inset-0 mx-auto max-w-[1728px]">

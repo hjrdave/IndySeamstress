@@ -10,7 +10,7 @@ const SOCIAL_LINKS = [{ label: "Facebook", href: FACEBOOK_URL, Icon: FacebookIco
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden px-6 pt-10 pb-14 text-center sm:text-left">
+    <footer className="relative overflow-hidden pt-10 pr-6 pb-14 pl-16 text-center sm:px-6 sm:text-left">
       <Image
         src={assetPath("/images/hero-background.png")}
         alt=""
@@ -78,7 +78,7 @@ export function SiteFooter() {
           Messenger button at the very bottom of the page when scrolled all
           the way down; not needed on larger screens where centered text
           never reaches that bottom-right corner. */}
-      <div className="relative mt-8 -mx-6 -mb-14 bg-white px-6 pt-3 pb-20 sm:pb-3">
+      <div className="relative mt-8 -mr-6 -mb-14 -ml-16 bg-white px-6 pt-3 pb-20 sm:-ml-6 sm:pb-3">
         <p className="text-center text-xs text-muted-foreground">
           &copy;{new Date().getFullYear()} Indy Seamstress, Something Stitched,
           Something Sewn

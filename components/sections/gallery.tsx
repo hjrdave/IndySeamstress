@@ -24,7 +24,7 @@ export function GallerySection() {
         className="absolute bottom-0 left-1/2 h-20 w-[140%] -translate-x-1/2 translate-y-1/2 rounded-[50%] bg-white sm:h-28"
       />
 
-      <div className="relative px-6">
+      <div className="relative pr-6 pl-16 sm:px-6">
         <h2 className="mx-auto mb-8 max-w-5xl font-heading text-3xl">Gallery</h2>
         <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-3">
           {GALLERY_PHOTOS.map((photo) => (

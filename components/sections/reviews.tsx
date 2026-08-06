@@ -8,7 +8,7 @@ export async function ReviewsSection() {
   const reviews = await getReviews();
 
   return (
-    <section id="reviews" className="px-6 pt-16 pb-32">
+    <section id="reviews" className="pt-16 pr-6 pb-32 pl-16 sm:px-6">
       <h2 className="mx-auto mb-8 max-w-5xl font-heading text-4xl font-normal">
         Reviews
       </h2>
